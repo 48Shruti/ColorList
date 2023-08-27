@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="colorfirst"
+            name="colorFirst"
             type="String"/>
         <variable
-            name="colorsecond"
+            name="colorSecond"
             type="String" />
         <variable
-            name="save"
-            type="Button" />
+            name="mainActivity"
+            type="com.shruti.colorlist.MainActivity" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvcolorfirst"
-            android:text="@{colorfirst}"
+            android:text="@{colorFirst}"
             android:textSize="@dimen/size_20sp"
             tools:text="@string/colorfirst"/>
         <EditText
@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{colorsecond}"
+            android:text="@{colorSecond}"
             android:id="@+id/tvcolorsecond"
             android:textSize="@dimen/size_20sp"
             tools:text="@string/colorsecond"/>
@@ -45,7 +45,9 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnsave"/>
+            android:id="@+id/btnsave"
+            android:text="Save"
+            android:onClick="@{()->mainActivity.save}"/>
     </LinearLayout>
 
 </layout>
