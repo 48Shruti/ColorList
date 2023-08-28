@@ -26,6 +26,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{()->mainActivity.saveColorFirst}"
             android:id="@+id/etcolorfirst"/>
         <TextView
             android:layout_width="match_parent"
@@ -37,6 +38,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick=""
             android:id="@+id/etcolorsecond"/>
         <EditText
             android:layout_width="match_parent"
