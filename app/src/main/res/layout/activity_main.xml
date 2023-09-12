@@ -2,30 +2,43 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<data>
-<variable
-    name="show"
-    type="boolean" />
-    <variable
-        name="mainactivity"
-        type="com.shruti.colorlist.MainActivity" />
-    <import type="android.view.View"/>
-</data>
+
+    <data>
+
+        <variable
+            name="show"
+            type="boolean" />
+
+        <variable
+            name="mainactivity"
+            type="com.shruti.colorlist.MainActivity" />
+
+        <import type="android.view.View" />
+    </data>
+
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-    <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listview"
-        android:layout_weight="1"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:onClick="@{()-> mainactivity.buttonClick()}"
-        android:id="@+id/fab"/>
-</LinearLayout>
-    </layout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="@{()-> mainactivity.buttonClick()}" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnclear"
+            android:onClick="@{()-> mainactivity.clearData()}"
+            android:text="Clear"/>
+    </LinearLayout>
+</layout>

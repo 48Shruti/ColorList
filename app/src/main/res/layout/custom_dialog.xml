@@ -20,25 +20,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvcolorfirst"
-            android:text="@{colorFirst}"
-            android:textSize="@dimen/size_20sp"
-            tools:text="@string/colorfirst"/>
+            android:text="Select first color"
+            android:textSize="@dimen/size_20sp" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{()->mainActivity.saveColorFirst}"
+            android:focusable="false"
+            android:text="@{colorFirst}"
+            android:onClick="@{()->mainActivity.saveColor(1)}"
             android:id="@+id/etcolorfirst"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{colorSecond}"
+            android:text="Select second color"
             android:id="@+id/tvcolorsecond"
             android:textSize="@dimen/size_20sp"
-            tools:text="@string/colorsecond"/>
+            />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick=""
+            android:text="@{colorSecond}"
+            android:focusable="false"
+            android:onClick="@{()-> mainActivity.saveColor(2)}"
             android:id="@+id/etcolorsecond"/>
         <EditText
             android:layout_width="match_parent"
@@ -49,7 +52,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnsave"
             android:text="Save"
-            android:onClick="@{()->mainActivity.save}"/>
+            android:onClick="@{()->mainActivity.save()}"/>
     </LinearLayout>
 
 </layout>
